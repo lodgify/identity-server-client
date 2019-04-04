@@ -10,7 +10,7 @@ import {
 
 import { getPathname } from './utils/getPathname';
 import { getUrl } from './utils/getUrl';
-import { ORIGIN } from './constants';
+import { INCLUDE_CREDENTIALS_HEADER, ORIGIN } from './constants';
 import { PATHNAME_TEMPLATE } from './constants';
 import { post } from './post';
 
@@ -37,7 +37,11 @@ describe(`POST login`, () => {
   });
 
   it('should call `postJSON` with the correct arguments', () => {
-    expect(postJSON).toHaveBeenCalledWith(URL, formValues);
+    expect(postJSON).toHaveBeenCalledWith(
+      URL,
+      formValues,
+      INCLUDE_CREDENTIALS_HEADER
+    );
   });
 
   it('should return whatever `postJSON` returns', () => {
