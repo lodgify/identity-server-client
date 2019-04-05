@@ -14,8 +14,8 @@ const websiteId = 123456;
 
 postLogin(websiteId, {
   email: "bruce@wayneenterprises.com",
-  password: "IAmBatman"
-  websiteId,
+  password: "IAmBatman",
+  websiteId
 });
 ```
 
