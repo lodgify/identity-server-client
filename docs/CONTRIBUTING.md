@@ -33,5 +33,7 @@ npm run pre-commit
 
 When a commit is merged into master branch, Travis does the following tasks
 
-- Builds a fresh React Styleguidist styleguide
+- Runs linting
+- Runs tests
+- Builds package
 - Publishes the package to the NPM registry
