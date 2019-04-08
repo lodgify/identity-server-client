@@ -1,4 +1,4 @@
-jest.mock('@lodgify/isomorphic-fetch-helpers');
+jest.mock('@lodgify/fetch-related-utils');
 jest.mock('./utils/getUrl');
 jest.mock('./utils/getPathname');
 
@@ -6,11 +6,11 @@ import {
   postJSON,
   // eslint-disable-next-line import/named
   postJSONReturnValue,
-} from '@lodgify/isomorphic-fetch-helpers';
+} from '@lodgify/fetch-related-utils';
 
 import { getPathname } from './utils/getPathname';
 import { getUrl } from './utils/getUrl';
-import { INCLUDE_CREDENTIALS_HEADER, ORIGIN } from './constants';
+import { INCLUDE_CREDENTIALS_OPTIONS, ORIGIN } from './constants';
 import { PATHNAME_TEMPLATE } from './constants';
 import { post } from './post';
 
@@ -40,7 +40,8 @@ describe(`POST login`, () => {
     expect(postJSON).toHaveBeenCalledWith(
       URL,
       formValues,
-      INCLUDE_CREDENTIALS_HEADER
+      {},
+      INCLUDE_CREDENTIALS_OPTIONS
     );
   });
 

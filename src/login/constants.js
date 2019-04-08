@@ -10,4 +10,4 @@ const OWNER_LOGIN_FRAGMENT = `/account/owner-login/`;
 
 export const PATHNAME_TEMPLATE = `${OWNER_LOGIN_FRAGMENT}${WEBSITE_ID_PLACEHOLDER}`;
 
-export const INCLUDE_CREDENTIALS_HEADER = { credentials: 'include' };
+export const INCLUDE_CREDENTIALS_OPTIONS = { credentials: 'include' };
